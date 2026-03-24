@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load the image (여기에 테스트할 이미지 파일 이름을 넣으세요)
-img = cv2.imread('image.png')
+img = cv2.imread('fail.png')
 
 # Convert the image to grayscale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -23,7 +23,7 @@ cartoon = cv2.bitwise_and(color, color, mask=edges)
 cv2.imshow("Cartoon Rendering", cartoon)
 
 # (추가) 결과물 캡처를 위해 파일로 자동 저장
-cv2.imwrite("cartoon_result1.jpg", cartoon)
+cv2.imwrite("failed.jpg", cartoon)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
